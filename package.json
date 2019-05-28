@@ -1,0 +1,36 @@
+{
+  "name": "@bahmutov/parcel-json-server",
+  "version": "1.0.0",
+  "description": "Combination of ParcelJs bundler and json-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/cli"
+  },
+  "private": false,
+  "bin": {
+    "parcel-json-server": "src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/parcel-json-server.git"
+  },
+  "keywords": [
+    "parcel",
+    "bundler",
+    "reset",
+    "json",
+    "json-server"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/parcel-json-server/issues"
+  },
+  "homepage": "https://github.com/bahmutov/parcel-json-server#readme",
+  "dependencies": {
+    "json-server": "0.15.0",
+    "json-server-reset": "1.1.0",
+    "parcel-bundler": "1.12.3"
+  }
+}
