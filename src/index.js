@@ -24,14 +24,14 @@ const start = (application, db, port) => {
       return next()
     }
 
-    console.log('request for parcel %s %s', req.method, req.path)
+    debug('request for parcel %s %s', req.method, req.path)
     return bundlerMiddleware(req, res, next)
   })
 
   server.use(middlewares)
   server.use(router)
   server.listen(port, () => {
-    console.log('JSON Server is running at port %d', port)
+    console.log('parcel-json-server is running at port %d', port)
   })
 }
 
