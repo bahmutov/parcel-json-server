@@ -25,6 +25,9 @@
     "json",
     "json-server"
   ],
+  "files": [
+    "src"
+  ],
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
   "license": "MIT",
   "bugs": {
