@@ -1,25 +1,14 @@
-version: 2
-
-jobs:
-  test:
-    parallelism: 1
-    working_directory: ~/app
-    docker:
-      - image: cypress/base:10
-    steps:
-      - checkout
-      - restore_cache:
-          key: my-cache-{{ .Branch }}-1
-      - run: npm ci
-      - save_cache:
-          key: my-cache-{{ .Branch }}-1-{{ checksum "package.json" }}
-          paths:
-            - ~/.npm
-      - run: npm test
-      - run: npm run semantic-release
-
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
 workflows:
-  version: 2
-  test:
+  build:
     jobs:
-      - test
+      - cypress/run:
+          executor: cypress/base-10
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          no-workspace: true
+          store_artifacts: true
+          post-steps:
+            - run: npm run semantic-release
