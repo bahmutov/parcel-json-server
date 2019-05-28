@@ -18,6 +18,28 @@ npm i -D @bahmutov/parcel-json-server
 
 ## Use
 
+- create a JSON file to server as a database / REST api, see [json-server][json-server] documentation. For example see [test/data.json](test/data.json)
+- have an HTML with JavaScript, CSS, etc. for [Parcel][parcel] bundler to process and serve, for example see [test/app/index.html](test/app/index.html)
+- run `parcel-json-server --entrypoint <path to HTML file> --database <path to JSON file>` and get the app running at `localhost:<port>` with REST endpoints at `localhost:<port>/<resource name>`
+
+### Options
+
+```text
+$ node ./src/cli.js --help
+  Usage: cli.js [options] [command]
+
+  Commands:
+    help     Display help
+    version  Display version
+
+  Options:
+    -d, --database    database JSON filename
+    -e, --entrypoint  HTML filename to serve
+    -h, --help        Output usage information
+    -p, --port <n>    Port to run on (defaults to 3000)
+    -v, --version     Output the version number
+```
+
 ### Debugging
 
 If you want to see debug messages, run with environment variable
