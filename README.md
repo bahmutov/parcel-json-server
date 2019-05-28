@@ -4,7 +4,7 @@
 
 [![NPM][npm-icon] ][npm-url]
 
-[![Build status][ci-image] ][ci-url]
+[![CircleCI](https://circleci.com/gh/bahmutov/parcel-json-server.svg?style=svg)](https://circleci.com/gh/bahmutov/parcel-json-server)
 [![semantic-release][semantic-image] ][semantic-url]
 [![renovate-app badge][renovate-badge]][renovate-app]
 
@@ -46,14 +46,10 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[npm-icon]: https://nodei.co/npm/json-server-reset.svg?downloads=true
-[npm-url]: https://npmjs.org/package/json-server-reset
-[ci-image]: https://travis-ci.org/bahmutov/json-server-reset.svg?branch=master
-[ci-url]: https://travis-ci.org/bahmutov/json-server-reset
+[npm-icon]: https://nodei.co/npm/@bahmutov/parcel-json-server.svg?downloads=true
+[npm-url]: https://npmjs.org/package/@bahmutov/parcel-json-server
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
-[standard-url]: http://standardjs.com/
 [renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
 [renovate-app]: https://renovateapp.com/
 
