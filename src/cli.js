@@ -1,10 +1,19 @@
 #!/usr/bin/env node
 
-// TODO grab filenames from CLI arguments
+const debug = require('debug')('@bahmutov/parcel-json-server')
+const args = require('args')
 const path = require('path')
-const testFolder = path.join(__dirname, '..', 'test')
-const application = path.join(testFolder, 'app', 'index.html')
-const db = path.join(testFolder, 'data.json')
+
+const flags = args
+  .option('port', 'Port to run on', 3000)
+  .option('entrypoint', 'HTML filename to serve')
+  .option('database', 'database JSON filename')
+  .parse(process.argv)
+
+debug('CLI arguments %o', flags)
+
+const application = path.resolve(flags.entrypoint)
+const db = path.resolve(flags.database)
 
 const { start } = require('.')
-start(application, db, process.env.PORT || 3000)
+start(application, db, flags.port)

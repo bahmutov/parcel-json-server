@@ -8,6 +8,24 @@
 [![semantic-release][semantic-image] ][semantic-url]
 [![renovate-app badge][renovate-badge]][renovate-app]
 
+## Install
+
+Requires Node 10+ because of ParcelJS bundler
+
+```shell
+npm i -D @bahmutov/parcel-json-server
+```
+
+## Use
+
+### Debugging
+
+If you want to see debug messages, run with environment variable
+
+```
+DEBUG=@bahmutov/parcel-json-server
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2019
@@ -53,5 +71,5 @@ OTHER DEALINGS IN THE SOFTWARE.
 [renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
 [renovate-app]: https://renovateapp.com/
 
-[parcel]:
-[json-server]:
+[parcel]: https://parceljs.org
+[json-server]: https://github.com/typicode/json-server

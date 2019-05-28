@@ -1,7 +1,12 @@
 const Bundler = require('parcel-bundler')
 const jsonServer = require('json-server')
+const debug = require('debug')('@bahmutov/parcel-json-server')
 
 const start = (application, db, port) => {
+  debug('starting parcel-json-server on port %d', port)
+  debug('bundling %s', application)
+  debug('serving REST API based on %s', db)
+
   const options = {}
   const bundler = new Bundler(application, options)
 

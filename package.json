@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "start": "node ./src/cli",
+    "start": "node ./src/cli --port 3000 --entrypoint test/app/index.html --database test/data.json",
     "semantic-release": "semantic-release",
     "dev": "start-test 3000 cy:open",
     "cy:open": "cypress open"
@@ -32,6 +32,8 @@
   },
   "homepage": "https://github.com/bahmutov/parcel-json-server#readme",
   "dependencies": {
+    "args": "5.0.1",
+    "debug": "4.1.1",
     "json-server": "0.15.0",
     "json-server-reset": "1.1.0",
     "parcel-bundler": "1.12.3"
