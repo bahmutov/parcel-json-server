@@ -40,6 +40,19 @@ $ node ./src/cli.js --help
     -v, --version     Output the version number
 ```
 
+### Example
+
+In this repo the example `npm start` script runs
+
+```
+$ @bahmutov/parcel-json-server \
+    --port 3000 \
+    --entrypoint test/app/index.html \
+    --database test/data.json
+```
+
+Then I can open `localhost:3000` and see the application, and make calls to `localhost:3000/todos` (full REST endpoint)
+
 ### Debugging
 
 If you want to see debug messages, run with environment variable
