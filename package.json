@@ -42,7 +42,7 @@
     "parcel-bundler": "1.12.3"
   },
   "devDependencies": {
-    "cypress": "3.4.0",
+    "cypress": "3.4.1",
     "semantic-release": "15.13.18",
     "start-server-and-test": "1.9.1"
   }
