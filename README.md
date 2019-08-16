@@ -53,6 +53,20 @@ $ @bahmutov/parcel-json-server \
 
 Then I can open `localhost:3000` and see the application, and make calls to `localhost:3000/todos` (full REST endpoint)
 
+To reset data, use `POST /reset` request, pass new data to overwrite ALL old data.
+For example, from a Cypress test [cypress/integration/spec.js](cypress/integration/spec.js) you can do the following
+
+```js
+const todos = require('../../test/data.json').todos
+
+it('responds from REST API', () => {
+  cy.request('POST', '/reset', { todos })
+  cy.request('/todos')
+    .its('body')
+    .should('deep.equal', todos)
+})
+```
+
 ### Debugging
 
 If you want to see debug messages, run with environment variable
