@@ -12,6 +12,8 @@ const start = (application, db, port) => {
 
   const server = jsonServer.create()
   const router = jsonServer.router(db)
+  const paths = Object.keys(router.db.__wrapped__).map((k) => `/${k}`)
+
   server.use(setApp(server, router.db))
   server.use(bodyParser)
   server.use(reset)
@@ -21,9 +23,8 @@ const start = (application, db, port) => {
   const bundlerMiddleware = bundler.middleware()
 
   server.use((req, res, next) => {
-    // TODO determine the path from loaded database resources
-    if (req.path === '/todos') {
-      // data request, continue to JSON server
+    if (paths.some((p) => req.path === p)) {
+      debug('request for json-server %s %s', req.method, req.path)
       return next()
     }
 
