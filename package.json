@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "cypress": "7.7.0",
-    "semantic-release": "15.14.0",
+    "semantic-release": "24.2.5",
     "start-server-and-test": "1.15.4"
   }
 }
